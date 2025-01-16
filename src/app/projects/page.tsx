@@ -8,6 +8,9 @@ export const metadata = {
   description: "Projects that I've been working on",
 }
 
+export const revalidate = 10;
+export const dynamic = "force-dynamic";
+
 export default async function Projects() {
   const pages = await fetchPages();
 

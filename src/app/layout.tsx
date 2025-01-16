@@ -24,11 +24,15 @@ export default function RootLayout({
       <body
         className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-blackCustom text-sm text-whiteCustom antialiased`}
       >
-        <div className='mx-auto w-full max-w-[800px] px-4 lg:px-0'>
-          <div className='mb-6'>
+        <div className='relative mx-auto w-full max-w-[800px] border border-lighterBackground py-4'>
+          <div className='absolute -left-10 -top-10 hidden h-10 w-10 border-b border-r border-lighterBackground lg:block'></div>
+          <div className='absolute -right-10 -top-10 hidden h-10 w-10 border-b border-l border-lighterBackground lg:block'></div>
+          <div className='absolute -bottom-10 -left-10 hidden h-10 w-10 border-r border-t border-lighterBackground lg:block'></div>
+          <div className='absolute -bottom-10 -right-10 hidden h-10 w-10 border-l border-t border-lighterBackground lg:block'></div>
+          <div className='mb-6 border-b border-lighterBackground px-4 pb-4'>
             <SelectPages />
           </div>
-          <div className='mx-auto h-[356px] max-h-[356px] overflow-y-auto'>
+          <div className='mx-auto h-[356px] max-h-[356px] overflow-y-auto px-4'>
             {children}
           </div>
         </div>

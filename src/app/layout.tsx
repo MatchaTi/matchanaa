@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-blackCustom text-whiteCustom`}
+        className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-blackCustom text-sm text-whiteCustom antialiased`}
       >
         <div className='mx-auto w-full max-w-[800px] px-4 lg:px-0'>
           <div className='mb-6'>

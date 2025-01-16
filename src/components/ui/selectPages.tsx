@@ -17,10 +17,10 @@ export default function SelectPages() {
           <NavigationMenuTrigger>Navigation</NavigationMenuTrigger>
           <NavigationMenuContent className=''>
             <NavigationMenuLink href='/'>
-              <div className='block w-[134px] p-2 hover:bg-lighterBackground'>Home</div>
+              <div className='block w-[134px] p-2 text-sm hover:bg-lighterBackground'>Home</div>
             </NavigationMenuLink>
             <NavigationMenuLink href='/projects'>
-              <div className='block w-[134px] p-2 hover:bg-lighterBackground'>Projects</div>
+              <div className='block w-[134px] p-2 text-sm hover:bg-lighterBackground'>Projects</div>
             </NavigationMenuLink>
           </NavigationMenuContent>
         </NavigationMenuItem>

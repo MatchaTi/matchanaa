@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import SelectPages from '@/components/ui/selectPages';
 
 const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
@@ -17,13 +18,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang='en'>
       <body
-        className={`${jetBrainsMono.className} mx-auto flex h-screen w-full max-w-[800px] items-center px-4 antialiased lg:px-0`}
+        className={`${jetBrainsMono.className} flex h-screen items-center justify-center bg-blackCustom text-whiteCustom`}
       >
-        <div className='h-[356px] max-h-[345px] overflow-y-auto'>
-          {children}
+        <div className='mx-auto w-full max-w-[800px] px-4 lg:px-0'>
+          <div className='mb-6'>
+            <SelectPages />
+          </div>
+          <div className='mx-auto h-[356px] max-h-[356px] overflow-y-auto'>
+            {children}
+          </div>
         </div>
       </body>
     </html>

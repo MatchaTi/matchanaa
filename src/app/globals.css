@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -29,6 +30,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
   }
+
   .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
@@ -56,11 +58,51 @@
     --chart-5: 340 75% 55%
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #232A2D #141B1E;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #141B1E;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #141B1E;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #141B1E;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #232A2D;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #232A2D;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #232A2D;
 }
